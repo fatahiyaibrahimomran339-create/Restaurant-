@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: "Tajawal", sans-serif;
+    background: linear-gradient(to bottom, black, #e8ff18);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: rgb(251, 255, 25);
+    overflow-x: hidden;
+  }
+  
+  /* --- Toolbar --- */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#00000034;
+    backdrop-filter: blur(5px);
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .toolbar h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(251, 255, 25);
+    text-shadow: 1px 1px 3px rgb(105, 105, 4);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+    text-shadow: 1px 1px 2px yellow;
+  }
+  
+  /* --- Ripple Effect --- */
+  .toolbar h1::after {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 32, 0.712);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+  }
+  
+  .toolbar h1:hover::after,
+  .toolbar h1:active::after {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* --- Dropdown --- */
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 55px;
+    left: 10px;
+    background: #111;
+    border-radius: 10px;
+    list-style: none;
+    padding: 10px;
+  }
+  .dropdown li {
+    padding: 10px;
+    color: yellow;
+    cursor: pointer;
+  }
+  .dropdown li:hover {
+    background: rgba(255, 255, 0, 0.2);
+  }
+  
+  /* --- مستطيلات القائمة --- */
+  .container {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .card {
+    width: 300%;
+    max-width: 1000px;
+    background: rgba(109, 98, 3, 0.329);
+    backdrop-filter: blur(8px);
+    border: 2px solid yellow;
+    border-radius: 12px;
+    margin: 20px 0;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .card img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .card h2 {
+    margin: 0;
+    font-size: 22px;
+    text-shadow: #252201a6;
+  }
+  
+  /* تأثير عند الـ Scroll */
+  .card.active {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  .card.inactive {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  
+  /* --- Modal للتقييم --- */
+  .stars {
+    font-size: 24px;
+    cursor: pointer;
+    color: gray;
+  }
+  .stars .filled {
+    color: gold;
+  }
+  .rating {
+    margin-top: 10px;
+    font-size: 14px;
+    color: yellow;
+  }
+  

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المطاعم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="toolbar">
+    <h1 onclick="goBack()">رجوع</h1>
+    <h1>المطاعم</h1>
+    <div class="menu-btn" onclick="toggleMenu()">⋮</div>
+    <ul class="dropdown" id="dropdown">
+      <li>الإعدادات</li>
+      <li onclick="goBack()">رجوع</li>
+    </ul>
+  </header>
+
+  <div class="container" id="cards">
+    <div class="card" onclick="openPage('restaurant-details.html')">
+      <img src="https://source.unsplash.com/100x100/?restaurant" alt="">
+      <h2>مطعم البيتزا</h2>
+    </div>
+    <div class="card" onclick="openPage('restaurant-details.html')">
+      <img src="https://source.unsplash.com/100x100/?burger" alt="">
+      <h2>مطعم البرجر</h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
