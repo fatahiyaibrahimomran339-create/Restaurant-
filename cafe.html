@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الكافيهات</title>
+  <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+  <div class="toolbar">
+    <a href="restaurants.html" class="section">المطاعم</a>
+    <div class="section">الكافيهات</div>
+    <div class="section">استكشاف</div>
+    <div class="menu-btn">☰</div>
+  </div>
+  <div class="cafe-carf"> <a href="restaurants.html" class="restaurants"></a>
+
+  </div>
+
+  <!-- قسم الكافيهات -->
+  <div class="carousel" id="cafesCarousel">
+    <div class="card" onclick="openDetails('cafe1')">
+    <div class="cafe-image">
+      <img src="FB_IMG_1645480197142.jpg" alt="cafe image">
+    </div> 
+     <div class="cafe-text"><h2>cafe blazza</h2><p>a berfict coffee to make your mode</p></div>
+    </div>
+    <div class="card" onclick="openDetails('cafe1')">
+        <div class="cafe-image">
+          <img src="FB_IMG_1645480176586.jpg" alt="cafe image">
+        </div> 
+         <div class="cafe-text"><h2>cafe blazza</h2><p>a berfict coffee to make your mode</p></div>
+        </div>
+    <div class="card" onclick="openDetails('cafe1')">
+    <div class="cafe-image">
+      <img src="FB_IMG_1645480170071.jpg" alt="cafe image">
+    </div> 
+    <div class="card" onclick="openDetails('cafe1')">
+        <div class="cafe-image">
+          <img src="FB_IMG_1645480146593.jpg" alt="cafe image">
+        </div> 
+         <div class="cafe-text"><h2>cafe blazza</h2><p>a berfict coffee to make your mode</p></div>
+        </div>
+     <div class="cafe-text"><h2>cafe blazza</h2><p>a berfict coffee to make your mode</p></div>
+    </div>
+    <div class="card" onclick="openDetails('cafe2')">
+      <img src="https://via.placeholder.com/80" alt="cafe image">
+      <span>cafe2</span>
+    </div>
+
+    <div class="card" onclick="openDetails('cafe3')">
+      <img src="https://via.placeholder.com/80" alt="cafe image">
+      <span>cafe3</span>
+    </div>
+    <div class="card" onclick="openDetails('cafe3')">
+        <img src="https://via.placeholder.com/80" alt="cafe image">
+        <span>cafe3</span>
+      </div>
+      
+    
+  </div>
+
+  <!-- تفاصيل الكافي -->
+  <div class="details-carousel hidden" id="detailsCarousel">
+    <div class="detail-card">📖 المينيو</div>
+    <div class="detail-card">📍 الموقع</div>
+    <div class="detail-card">🚚 الدليفري</div>
+    <div class="detail-card">⭐ التقييم: 4.5/5</div>
+  </div>
+
+  <script src="cafe.js"></script>
+</body>
+</html>

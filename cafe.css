@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px;
+    font-size: 18px;
+  }
+  
+  .section {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    color:#fff
+  }
+  
+  .menu-btn {
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  .carousel, .details-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .card, .detail-card {
+    flex: 0 0 100%; /* كل مستطيل بعرض الصفحة */
+    height: 300px;
+    background: linear-gradient(135deg, #444, #222);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    transition: transform 0.5s;
+    font-size: 24px;
+    position: relative;
+  }
+  
+  .card img {
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  
+  .card span {
+    font-size: 22px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .card {
+    display: flex;
+    width: 100px;
+    height: 200px;
+    margin: 20px 0;
+    border-radius: 20;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0,2);
+  }
+  .cafe-image {
+    flex: 2;
+    position: relative;
+  }
+  .cafe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit:ncover
+  }
+  .cafe-text {
+    flex: 1;
+    background: #22222227;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+  }
+  .cafe text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 80px;
+    height: 100;
+    background: #fff;
+    border-top-left-radius: 100px;
+  }
