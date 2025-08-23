@@ -5,6 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الرئيسية</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@supabase/supabase-js"><script>
+  // استبدلي بالقيم من Supabase
+  const SUPABASE_KEY ="https://qnqttucsrwpesxkzeovu.supabase.co";
+  const SUPABASE_KEY = "YOUR-ANON-KEY";
+
+  const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  // مثال: تسجيل مستخدم جديد
+  async function signUp() {
+    let { user, error } = await supabase.auth.signUp({
+      email: "example@email.com",
+      password: "password123"
+    });
+    if (error) {
+      console.log("خطأ:", error.message);
+    } else {
+      console.log("تم التسجيل:", user);
+    }
+  }
+
+  // مثال: إدخال طلب جديد
+  async function addOrder() {
+    const { data, error } = await supabase
+      .from("orders")
+      .insert([
+        { user_id: 1, product_name: "بيتزا", quantity: 2 }
+      ]);
+    
+    if (error) {
+      console.log("خطأ:", error.message);
+    } else {
+      console.log("تم إضافة الطلب:", data);
+    }
+  }
+  </script></script>
 </head>
 <body>
   <!-- Toolbar -->
@@ -29,6 +64,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
