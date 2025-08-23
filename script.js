@@ -55,4 +55,22 @@ function toggleMenu() {
       });
     }
   }
+async function signUp() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { user, error } = await supabase.auth.signUp({ email, password });
+  if (error) alert(error.message);
+  else alert("تم التسجيل بنجاح!");
+}
+
+async function signIn() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { session, error } = await supabase.auth.signIn({ email, password });
+  if (error) alert(error.message);
+  else alert("تم تسجيل الدخول!");
+}
+
   
