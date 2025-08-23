@@ -39,7 +39,8 @@
       console.log("تم إضافة الطلب:", data);
     }
   }
-  </script></script>
+  </script>
+</script>
 </head>
 <body>
   <!-- Toolbar -->
@@ -54,6 +55,10 @@
       <li>الإعدادات</li>
       <li onclick="goBack()">رجوع</li>
     </ul>
+    <input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+<button onclick="signUp()">تسجيل</button>
+<button onclick="signIn()">دخول</button>
   </header>
 
   <div class="container">
@@ -64,6 +69,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
